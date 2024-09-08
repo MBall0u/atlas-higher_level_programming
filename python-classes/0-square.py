@@ -8,6 +8,7 @@ Classes:
 
 """
 
+
 class Square:
     """
 
@@ -16,3 +17,4 @@ class Square:
     """
 
     pass
+
