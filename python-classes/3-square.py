@@ -42,14 +42,14 @@ class Square:
 
     def area(self):
         """
-        
+
         Calculates the area of a square based off the given size.
-        
+
         Returns:
             Size of the square squared.
-        
+
         """
-        
+
         return self.__size ** 2
 
     pass
