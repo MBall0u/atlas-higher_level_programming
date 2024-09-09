@@ -39,7 +39,7 @@ class Square:
         Returns:
             int: the size of the square
         """
-        
+
         return self.__size
 
     @size.setter
@@ -76,4 +76,17 @@ class Square:
 
         return self.__size ** 2
 
-    pass
+    def my_print(self):
+        """
+
+        Visually prints out the size of the square
+
+        """
+
+        if self.__size == 0:
+            print("")
+        else:
+            for i in range(self.__size):
+                for j in range(self.__size):
+                    print("#", end='')
+                print("")
