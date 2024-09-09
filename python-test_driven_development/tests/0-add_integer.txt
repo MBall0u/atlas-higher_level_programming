@@ -40,4 +40,4 @@ This is for Float overflow.
 ::
 
     >>> add_integer(999999.1)
-    1000097
+    10000097
