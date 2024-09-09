@@ -1,4 +1,11 @@
 #!/usr/bin/python3
+"""
+
+This is a simple module where we are just adding a two integers together.
+
+"""
+
+
 def add_integer(a, b=98):
     """
 
