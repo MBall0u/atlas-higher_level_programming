@@ -34,3 +34,10 @@ It doesn't work if one of the inputs is not an integer or float.
     Traceback (most recent call last):
         ...
     TypeError: a must be an integer
+
+This is for Float overflow.
+
+::
+
+    >>> add_integer(-2.5)
+    96
