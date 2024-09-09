@@ -39,5 +39,5 @@ This is for Float overflow.
 
 ::
 
-    >>> add_integer(-2.5)
-    96
+    >>> add_integer(999999.1)
+    10000097
