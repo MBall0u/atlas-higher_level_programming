@@ -138,6 +138,8 @@ class Rectangle:
                 print("#", end='')
             print("")
 
+        return ""
+
     def __repr__(self):
         """
 
