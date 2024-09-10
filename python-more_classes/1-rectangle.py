@@ -26,8 +26,8 @@ class Rectangle:
             height (int, optional): The height that must be greater than or equal to zero. Defaults to 0.
         """
 
-        self.__height = height
-        self.__width = width
+        self.height = height
+        self.width = width
 
     @property
     def width(self):
