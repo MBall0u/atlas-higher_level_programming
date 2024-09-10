@@ -136,8 +136,9 @@ class Rectangle:
         for i in range(self.__height):
             for j in range(self.__width):
                 print("#", end='')
+            print("")
 
-        return ""
+        return None
 
     def __repr__(self):
         """
