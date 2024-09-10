@@ -22,8 +22,10 @@ class Rectangle:
         Initialization of values.
 
         Args:
-            width (int, optional): The width that must be greater than or equal to zero. Defaults to 0.
-            height (int, optional): The height that must be greater than or equal to zero. Defaults to 0.
+            width (int, optional): The width that must
+            be greater than or equal to zero. Defaults to 0.
+            height (int, optional): The height that must
+            be greater than or equal to zero. Defaults to 0.
         """
 
         self.height = height
