@@ -107,6 +107,7 @@ class Rectangle:
         Returns:
             int: height times width for area calculation.
         """
+
         return self.__height * self.__width
 
     def perimeter(self):
@@ -116,6 +117,7 @@ class Rectangle:
             int: returns the height multiplied by
             two plus the width multiplied by two.
         """
+
         if self.__height == 0 or self.__width == 0:
             return 0
         else:
@@ -127,9 +129,11 @@ class Rectangle:
         Prints the rectangle on the stdout.
 
         """
+
+        if self.__height == 0 or self.__width == 0:
+            return ""
+
         for i in range(self.__height):
             for j in range(self.__width):
                 print("#", end='')
             print("")
-
-        return None
