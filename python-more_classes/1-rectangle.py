@@ -17,6 +17,14 @@ class Rectangle:
     """
 
     def __init__(self, width=0, height=0):
+        """
+
+        Initialization of values.
+
+        Args:
+            width (int, optional): The width that must be greater than or equal to zero. Defaults to 0.
+            height (int, optional): The height that must be greater than or equal to zero. Defaults to 0.
+        """
         self.__width = width
         self.__height = height
 
@@ -51,6 +59,7 @@ class Rectangle:
 
         if value < 0:
             raise ValueError("width must be >= 0")
+
         self.__width = value
 
     @property
