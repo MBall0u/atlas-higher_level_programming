@@ -141,7 +141,7 @@ class Rectangle:
         result = ""
         for i in range(self.__height):
             for j in range(self.__width):
-                result += self.print_symbol
+                result += str(self.print_symbol)
             if i != (self.__height - 1):
                 result += "\n"
 
