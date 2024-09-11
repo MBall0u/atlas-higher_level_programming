@@ -133,12 +133,13 @@ class Rectangle:
         if self.__height == 0 or self.__width == 0:
             return ""
 
+        result = ""
         for i in range(self.__height):
             for j in range(self.__width):
-                print("#", end='')
-            print("")
+                result += "#"
+            result += "\n"
 
-        return None
+        return result
 
     def __repr__(self):
         """
