@@ -152,6 +152,10 @@ class Rectangle:
             str: string representation of the rectangle.
         """
 
-        test = "Rectangle(" + str(self.__width) + ", " + str(self.__height) + ")"
+        test = "Rectangle("
+        test += str(self.__width)
+        test += ", "
+        test += str(self.__height)
+        test += ")"
 
         return test
