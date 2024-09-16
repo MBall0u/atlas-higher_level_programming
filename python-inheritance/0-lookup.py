@@ -20,7 +20,5 @@ def lookup(obj):
         and methods.
     """
 
-    my_list = []
-    attrs = dir(obj)
-    my_list.append(attrs)
+    my_list = dir(obj)
     return my_list
