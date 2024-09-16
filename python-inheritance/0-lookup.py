@@ -13,11 +13,13 @@ def lookup(obj):
     and methods of an object.
 
     Args:
-        obj (list): _description_
+        obj (list): object.
 
     Returns:
-        _type_: _description_
+        list: returns the list of available attributes
+        and methods.
     """
+
     my_list = []
     attrs = dir(obj)
     my_list.append(attrs)
