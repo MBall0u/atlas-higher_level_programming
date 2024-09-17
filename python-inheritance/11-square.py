@@ -123,6 +123,7 @@ class Square(Rectangle):
         """
 
         super().__init__(size, size)
+        self.size = size
 
     def __str__(self):
         """
