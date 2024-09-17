@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 
-
+This is a simple module.
 
 """
 
@@ -9,17 +9,17 @@
 class BaseGeometry:
     """
 
-    
+    This is a simple base class.
 
     """
 
     def area(self):
         """
 
-        
+        This is not implemented.
 
         Raises:
-            Exception: _description_
+            Exception: area() is not implemented.
         """
 
         raise Exception("area() is not implemented")
@@ -27,15 +27,16 @@ class BaseGeometry:
     def integer_validator(self, name, value):
         """
 
-        
+        This is going to check the value and make sure it
+        is an integer and greater than 0.
 
         Args:
-            name (_type_): _description_
-            value (_type_): _description_
+            name (str): given name.
+            value (int): given integer.
 
         Raises:
-            TypeError: _description_
-            ValueError: _description_
+            TypeError: must be an integer.
+            ValueError: must be greater than 0.
         """
 
         if not isinstance(value, int):
