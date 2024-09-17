@@ -1,32 +1,32 @@
 #!/usr/bin/python3
 """
 
-
+This is a simple module.
 
 Raises:
-    Exception: _description_
-    TypeError: _description_
-    ValueError: _description_
+    Exception: area() is not implemented.
+    TypeError: value must be an int.
+    ValueError: value must be greater than 0.
 
 Returns:
-    _type_: _description_
+    bool: None
 """
 
 
 class BaseGeometry:
     """
-    
-    
-    
+
+    This is a simple parent class.
+
     """
 
     def area(self):
         """
 
-
+        This is not implemented.
 
         Raises:
-            Exception: _description_
+            Exception: area() is not implemented.
         """
 
         raise Exception("area() is not implemented")
@@ -34,18 +34,19 @@ class BaseGeometry:
     def integer_validator(self, name, value):
         """
 
-
+        This checks the value and returns None if no
+        exceptions are raised.
 
         Args:
-            name (_type_): _description_
-            value (_type_): _description_
+            name (str): variable name.
+            value (int): variable value.
 
         Raises:
-            TypeError: _description_
-            ValueError: _description_
+            TypeError: value must be an integer.
+            ValueError: value must be greater than 0.
 
         Returns:
-            _type_: _description_
+            bool: None
         """
 
         vtype = type(value)
@@ -60,20 +61,20 @@ class BaseGeometry:
 class Rectangle(BaseGeometry):
     """
 
-
+    This is a simple class to describe a rectangle.
 
     Args:
-        BaseGeometry (_type_): _description_
+        BaseGeometry (class): the parent class.
     """
 
     def __init__(self, width, height):
         """
 
-
+        This initializes and verifies the inputted values.
 
         Args:
-            width (_type_): _description_
-            height (_type_): _description_
+            width (int): provided width greater than 0.
+            height (int): provided height greater than 0.
         """
 
         if super().integer_validator("width", width) is None:
@@ -84,10 +85,10 @@ class Rectangle(BaseGeometry):
     def __str__(self):
         """
 
-
+        This is a simple print function.
 
         Returns:
-            _type_: _description_
+            str: a formatted string.
         """
 
         return "[Rectangle] {}/{}".format(self.__width, self.__height)
@@ -95,10 +96,10 @@ class Rectangle(BaseGeometry):
     def area(self):
         """
 
-
+        This is a simple area calculation.
 
         Returns:
-            _type_: _description_
+            int: the width multiplied by the height.
         """
 
         return self.__width * self.__height
