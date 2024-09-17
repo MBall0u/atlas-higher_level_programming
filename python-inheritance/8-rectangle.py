@@ -1,16 +1,16 @@
 #!/usr/bin/python3
-    """
+"""
 
-    This is a simple module.
+This is a simple module.
 
-    Raises:
-        Exception: area() is not implemented.
-        TypeError: must be an integer.
-        ValueError: must be greater than 0.
+Raises:
+    Exception: area() is not implemented.
+    TypeError: must be an integer.
+    ValueError: must be greater than 0.
 
-    Returns:
-        bool: None
-    """
+Returns:
+    bool: None
+"""
 
 
 class BaseGeometry:
