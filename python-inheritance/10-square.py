@@ -1,30 +1,32 @@
 #!/usr/bin/python3
 """
 
+This is a simple module.
+
 Raises:
-    Exception: _description_
-    TypeError: _description_
-    ValueError: _description_
+    Exception: area() not implemented.
+    TypeError: value must be an integer.
+    ValueError: value must be greater than 0.
 
 Returns:
-    _type_: _description_
+    bool: None
 """
 
 
 class BaseGeometry:
     """
 
-
+    This is a simple class describing a base geometry shape.
 
     """
 
     def area(self):
         """
 
-
+        This is not implemented.
 
         Raises:
-            Exception: _description_
+            Exception: area() is not implemented.
         """
 
         raise Exception("area() is not implemented")
@@ -32,18 +34,19 @@ class BaseGeometry:
     def integer_validator(self, name, value):
         """
 
-
+        Checks the value and make sure of two things:
+        That it is an integer and that it is greater than 0.
 
         Args:
-            name (_type_): _description_
-            value (_type_): _description_
+            name (str): variables name.
+            value (int): variables value.
 
         Raises:
-            TypeError: _description_
-            ValueError: _description_
+            TypeError: value is not an integer.
+            ValueError: value is not greater than 0.
 
         Returns:
-            _type_: _description_
+            bool: None
         """
 
         vtype = type(value)
@@ -58,20 +61,20 @@ class BaseGeometry:
 class Rectangle(BaseGeometry):
     """
 
-
+    This is a simple class that describes a rectangle.
 
     Args:
-        BaseGeometry (_type_): _description_
+        BaseGeometry (cls): the parent class.
     """
 
     def __init__(self, width, height):
         """
 
-
+        intializes the rectangles width and height.
 
         Args:
-            width (_type_): _description_
-            height (_type_): _description_
+            width (int): provided width.
+            height (int): provided height.
         """
 
         if super().integer_validator("width", width) is None:
@@ -82,10 +85,10 @@ class Rectangle(BaseGeometry):
     def __str__(self):
         """
 
-
+        prints a formatted string if str() or print() is called.
 
         Returns:
-            _type_: _description_
+            str: a formatted string.
         """
 
         return "[Rectangle] {}/{}".format(self.__width, self.__height)
@@ -93,10 +96,10 @@ class Rectangle(BaseGeometry):
     def area(self):
         """
 
-
+        Does a simple calculation for the area of the rectangle.
 
         Returns:
-            _type_: _description_
+            int: the area.
         """
 
         return self.__width * self.__height
@@ -104,19 +107,20 @@ class Rectangle(BaseGeometry):
 class Square(Rectangle):
     """
 
-
+    This is a simple class that describes a square.
 
     Args:
-        Rectangle (_type_): _description_
+        Rectangle (cls): the parent class.
     """
 
     def __init__(self, size):
         """
 
-
+        initializes the size of the square into the parent
+        classes width and height variables.
 
         Args:
-            size (_type_): _description_
+            size (int): the width and height of the square.
         """
 
         super().__init__(size, size)
