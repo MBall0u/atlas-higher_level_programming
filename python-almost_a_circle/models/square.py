@@ -142,9 +142,9 @@ class Square(Rectangle):
             if t > 1:
                 self.size = args[1]
                 if t > 2:
-                    self.__x = args[2]
+                    self.x = args[2]
                     if t > 3:
-                        self.__y = args[3]
+                        self.y = args[3]
         else:
             for key, value in kwargs.items():
                 setattr(self, key, value)
