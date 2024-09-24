@@ -273,14 +273,15 @@ class Rectangle(Base):
             self.__height
         )
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
 
         This method takes non-keyword args and
         updates the instance.
 
         Args:
-            int: variable number of non-keyword args.
+            *args (int): variable number of non-keyword args.
+            **kwargs (dict): dictionary of keyworded values.
         """
 
         t = len(args)
@@ -294,3 +295,6 @@ class Rectangle(Base):
                         self.__x = args[3]
                         if t > 4:
                             self.__y = args[4]
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
