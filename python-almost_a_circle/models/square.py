@@ -53,3 +53,28 @@ class Square(Rectangle):
             self.__y,
             self.__width
         )
+
+    @property
+    def size(self):
+        """
+
+        the getter for size
+
+        Returns:
+            int: width because it is the same as height.
+        """
+
+        return self.__width
+
+    @size.setter
+    def size(self, value):
+        """
+
+        The setter for size
+
+        Args:
+            value (int): the size of the square
+        """
+
+        self.width = value
+        self.height = value
