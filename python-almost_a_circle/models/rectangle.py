@@ -14,7 +14,7 @@ class Rectangle(Base):
     This is the rectangle class.
 
     Args:
-        Base (cls): parent class
+        Base (cls): this is the parent class
     """
 
     def __init__(self, width, height, x=0, y=0, id=None):
