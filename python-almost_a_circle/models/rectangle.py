@@ -111,7 +111,7 @@ class Rectangle(Base):
             value (int): the value of x.
         """
 
-        self.__x = x
+        self.__x = value
 
     @property
     def y(self):
