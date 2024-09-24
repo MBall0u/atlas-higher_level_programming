@@ -78,3 +78,49 @@ class Square(Rectangle):
 
         self.width = value
         self.height = value
+
+    @property
+    def width(self):
+        """
+
+        the overwritten width setter for size
+
+        Returns:
+            int: the width
+        """
+
+        return self.__width
+
+    @width.setter
+    def width(self, value):
+        """
+
+        the overwritten setter for width
+
+        Args:
+            value (int): the width of the square
+        """
+
+        self.__width = self.width_validation(value)
+
+    @property
+    def height(self):
+        """
+
+        the overwritten height getter
+
+        Returns:
+            int: the height
+        """
+        return self.__height
+
+    @height.setter
+    def height(self, value):
+        """
+
+        the overwritten setter for height
+
+        Args:
+            value (int): the height
+        """
+        self.__height = self.height_validation(value)
