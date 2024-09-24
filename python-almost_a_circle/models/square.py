@@ -140,7 +140,7 @@ class Square(Rectangle):
         if t > 0:
             self.id = args[0]
             if t > 1:
-                self.__width = args[1]
+                self.size(args[1])
                 if t > 2:
                     self.__x = args[2]
                     if t > 3:
