@@ -239,3 +239,16 @@ class Rectangle(Base):
         """
 
         return self.__width * self.__height
+
+    def display(self):
+        """
+
+        This method prints out the inputted rectangle
+        dimensions.
+
+        """
+
+        for i in range(self.__height):
+            for j in range(self.__width):
+                print("#", end='')
+        print("")
