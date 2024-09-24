@@ -137,8 +137,8 @@ class Rectangle(Base):
 
         self.__y = self.y_validation(value)
 
-    @staticmethod
-    def width_validation(value):
+    @classmethod
+    def width_validation(cls, value):
         """
 
         The width validation method.
@@ -149,15 +149,19 @@ class Rectangle(Base):
         Raises:
             TypeError: width must be an integer
             ValueError: width must be > 0
+
+        Returns:
+            int: the value
         """
 
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value <= 0:
             raise ValueError("width must be > 0")
+        return value
 
-    @staticmethod
-    def height_validation(value):
+    @classmethod
+    def height_validation(cls, value):
         """
 
         the height validation method
@@ -168,15 +172,19 @@ class Rectangle(Base):
         Raises:
             TypeError: height must be an integer
             ValueError: height must be > 0
+
+        Returns:
+            int: the value
         """
 
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value <= 0:
             raise ValueError("height must be > 0")
+        return value
 
-    @staticmethod
-    def x_validation(value):
+    @classmethod
+    def x_validation(cls, value):
         """
 
         The x validation method
@@ -187,18 +195,22 @@ class Rectangle(Base):
         Raises:
             TypeError: x must be an integer
             ValueError: x must be >= 0
+
+        Returns:
+            int: the value
         """
 
         if not isinstance(value, int):
             raise TypeError("x must be an integer")
         if value < 0:
             raise ValueError("x must be >= 0")
+        return value
 
-    @staticmethod
-    def y_validation(value):
+    @classmethod
+    def y_validation(cls, value):
         """
-
-        the y validation method
+        
+        The validation method for y
 
         Args:
             value (int): the value of y
@@ -206,12 +218,16 @@ class Rectangle(Base):
         Raises:
             TypeError: y must be an integer
             ValueError: y must be >= 0
+
+        Returns:
+            int: the value
         """
 
         if not isinstance(value, int):
             raise TypeError("y must be an integer")
         if value < 0:
             raise ValueError("y must be >= 0")
+        return value
 
     def area(self):
         """
