@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-from models.base import Base
 """
 
 This is a simple module.
@@ -7,6 +6,9 @@ This is a simple module.
 Returns:
     int: the values being assigned.
 """
+
+
+from models.base import Base
 
 
 class Rectangle(Base):
