@@ -213,7 +213,6 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("y must be >= 0")
 
-    @property
     def area(self):
         """
 
