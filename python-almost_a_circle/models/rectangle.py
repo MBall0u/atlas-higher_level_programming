@@ -11,8 +11,10 @@ Returns:
 class Rectangle(Base):
     """
 
-    This is the rectangle class.
+    This is a simple class that describes a rectangle.
 
+    Args:
+        Base (cls): the parent class.
     """
 
     def __init__(self, width, height, x=0, y=0, id=None):
