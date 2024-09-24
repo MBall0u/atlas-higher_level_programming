@@ -51,7 +51,7 @@ class Rectangle(Base):
             int: the private attribute width.
         """
 
-        return self.width_validation(self.__width)
+        return self.__width
 
     @width.setter
     def width(self, value):
@@ -75,7 +75,7 @@ class Rectangle(Base):
             int: the private attribute height.
         """
 
-        return self.height_validation(self.__height)
+        return self.__height
 
     @height.setter
     def height(self, value):
@@ -99,7 +99,7 @@ class Rectangle(Base):
             int: the private attribute x.
         """
 
-        return self.x_validation(self.__x)
+        return self.__x
 
     @x.setter
     def x(self, value):
@@ -123,7 +123,7 @@ class Rectangle(Base):
             int: the private attribute y.
         """
 
-        return self.y_validation(self.__y)
+        return self.__y
 
     @y.setter
     def y(self, value):
