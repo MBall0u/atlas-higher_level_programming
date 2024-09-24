@@ -36,10 +36,10 @@ class Rectangle(Base):
         """
 
         super().__init__(id)
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.__width = self.width_validation(width)
+        self.__height = self.height_validation(height)
+        self.__x = self.x_validation(x)
+        self.__y = self.y_validation(y)
 
     @property
     def width(self):
@@ -51,7 +51,7 @@ class Rectangle(Base):
             int: the private attribute width.
         """
 
-        return self.__width
+        return self.width_validation(self.__width)
 
     @width.setter
     def width(self, value):
@@ -61,18 +61,9 @@ class Rectangle(Base):
 
         Args:
             value (int): the value of width.
-
-        Raises:
-            TypeError: width must be an integer.
-            ValueError: width must be > 0.
         """
 
-        if not isinstance(value, int):
-            raise TypeError("width must be an integer")
-        elif value <= 0:
-            raise ValueError("width must be > 0")
-        else:
-            self.__width = value
+        self.__width = self.width_validation(value)
 
     @property
     def height(self):
@@ -84,7 +75,7 @@ class Rectangle(Base):
             int: the private attribute height.
         """
 
-        return self.__height
+        return self.height_validation(self.__height)
 
     @height.setter
     def height(self, value):
@@ -94,17 +85,9 @@ class Rectangle(Base):
 
         Args:
             value (int): the value of height.
-
-        Raises:
-            TypeError: height must be an integer.
-            ValueError: height must be > 0.
         """
-        if not isinstance(value, int):
-            raise TypeError("height must be an integer")
-        elif value <= 0:
-            raise ValueError("height must be > 0")
-        else:
-            self.__height = value
+
+        self.__height = self.height_validation(value)
 
     @property
     def x(self):
@@ -116,7 +99,7 @@ class Rectangle(Base):
             int: the private attribute x.
         """
 
-        return self.__x
+        return self.x_validation(self.__x)
 
     @x.setter
     def x(self, value):
@@ -126,18 +109,9 @@ class Rectangle(Base):
 
         Args:
             value (int): the value for x.
-
-        Raises:
-            TypeError: x must be an integer.
-            ValueError: x must be >= 0.
         """
 
-        if not isinstance(value, int):
-            raise TypeError("x must be an integer")
-        elif value < 0:
-            raise ValueError("x must be >= 0")
-        else:
-            self.__x = value
+        self.__x = self.x_validation(value)
 
     @property
     def y(self):
@@ -149,7 +123,7 @@ class Rectangle(Base):
             int: the private attribute y.
         """
 
-        return self.__y
+        return self.y_validation(self.__y)
 
     @y.setter
     def y(self, value):
@@ -159,15 +133,82 @@ class Rectangle(Base):
 
         Args:
             value (int): the value for y.
+        """
+
+        self.__y = self.y_validation(value)
+
+    @staticmethod
+    def width_validation(value):
+        """
+
+        The width validation method.
+
+        Args:
+            value (int): the value of width
 
         Raises:
-            TypeError: y must be an integer.
-            ValueError: y must be >= 0.
+            TypeError: width must be an integer
+            ValueError: width must be > 0
+        """
+
+        if not isinstance(value, int):
+            raise TypeError("width must be an integer")
+        if value <= 0:
+            raise ValueError("width must be > 0")
+
+    @staticmethod
+    def height_validation(value):
+        """
+
+        the height validation method
+
+        Args:
+            value (int): the value of height
+
+        Raises:
+            TypeError: height must be an integer
+            ValueError: height must be > 0
+        """
+
+        if not isinstance(value, int):
+            raise TypeError("height must be an integer")
+        if value <= 0:
+            raise ValueError("height must be > 0")
+
+    @staticmethod
+    def x_validation(value):
+        """
+
+        The x validation method
+
+        Args:
+            value (int): the value of x
+
+        Raises:
+            TypeError: x must be an integer
+            ValueError: x must be >= 0
+        """
+
+        if not isinstance(value, int):
+            raise TypeError("x must be an integer")
+        if value < 0:
+            raise ValueError("x must be >= 0")
+
+    @staticmethod
+    def y_validation(value):
+        """
+
+        the y validation method
+
+        Args:
+            value (int): the value of y
+
+        Raises:
+            TypeError: y must be an integer
+            ValueError: y must be >= 0
         """
 
         if not isinstance(value, int):
             raise TypeError("y must be an integer")
-        elif value < 0:
+        if value < 0:
             raise ValueError("y must be >= 0")
-        else:
-            self.__y = value
