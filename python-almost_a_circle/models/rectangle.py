@@ -209,7 +209,7 @@ class Rectangle(Base):
     @classmethod
     def y_validation(cls, value):
         """
-        
+
         The validation method for y
 
         Args:
