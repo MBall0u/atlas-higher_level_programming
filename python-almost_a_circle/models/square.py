@@ -124,3 +124,27 @@ class Square(Rectangle):
             value (int): the height
         """
         self.__height = self.height_validation(value)
+
+    def update(self, *args, **kwargs):
+        """
+
+        This method takes non-keyword args and
+        updates the instance.
+
+        Args:
+            *args (int): variable number of non-keyword args.
+            **kwargs (dict): dictionary of keyworded values.
+        """
+
+        t = len(args)
+        if t > 0:
+            self.id = args[0]
+            if t > 1:
+                self.__width = args[1]
+                if t > 2:
+                    self.__x = args[2]
+                    if t > 3:
+                        self.__y = args[3]
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
