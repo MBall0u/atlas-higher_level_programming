@@ -31,7 +31,7 @@ class Rectangle(Base):
             height (int): the height.
             x (int, optional): optional x. Defaults to 0.
             y (int, optional): optional y. Defaults to 0.
-            id (int, optional): optional 
+            id (int, optional): optional
             identifier. Defaults to None.
         """
 
