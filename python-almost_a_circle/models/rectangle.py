@@ -249,6 +249,8 @@ class Rectangle(Base):
         """
 
         for i in range(self.__height):
+            for a in range(self.__x):
+                print(" ", end='')
             for j in range(self.__width):
                 print("#", end='')
             print("")
