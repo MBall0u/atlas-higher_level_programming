@@ -62,7 +62,10 @@ class Base:
             list_objs (list): list of instances of base
         """
 
-        new_list = cls.to_json_string(list_objs)
+        if list_objs is None:
+            new_list = []
+        else:
+            new_list = cls.to_json_string(list_objs)
 
         filename = "{}.json".format(cls.__name__)
         with open(filename, 'w', encoding="utf-8") as f:
