@@ -65,8 +65,10 @@ class Base:
         if list_objs is None:
             new_list = []
         else:
-            new_list = cls.to_json_string(list_objs)
+            new_list = []
+            for obj in list_objs:
+                new_list.append(obj.to_dictionary())
 
         filename = "{}.json".format(cls.__name__)
         with open(filename, 'w', encoding="utf-8") as f:
-            json.dump(new_list, f)
+            json.dump(cls.to_json_string(new_list), f)
