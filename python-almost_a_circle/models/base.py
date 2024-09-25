@@ -71,4 +71,4 @@ class Base:
 
         filename = "{}.json".format(cls.__name__)
         with open(filename, 'w', encoding="utf-8") as f:
-            json.dump(cls.to_json_string(new_list), f)
+            json.dump(Base.to_json_string(new_list), f)
