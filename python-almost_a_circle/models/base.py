@@ -62,6 +62,8 @@ class Base:
             list_objs (list): list of instances of base
         """
 
+        new_list = self.to_json_string(list_objs)
+
         filename = "{}.json".format(cls.__name__)
         with open(filename, 'w', encoding="utf-8") as f:
-            json.dump(list_objs, f)
+            json.dump(new_list, f)
