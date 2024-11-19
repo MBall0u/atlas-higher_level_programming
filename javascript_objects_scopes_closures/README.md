@@ -1,0 +1,1 @@
+This folder is for the project JavaScript - Objects, Scopes and Closures
