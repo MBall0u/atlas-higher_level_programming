@@ -1,8 +1,8 @@
 #!/usr/bin/node
+const request = require(Request);
 const givenUrl = process.argv[2];
-const request = new Request(givenUrl, { method: 'GET' });
 
-fetch(request)
-  .then((response) => {
-    console.log('code: ' + response.status);
-  });
+request(givenUrl, (err, response) => {
+  if (err) throw err;
+  else console.log('code: ' + response.statusCode);
+});
